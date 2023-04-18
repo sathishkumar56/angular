@@ -5,5 +5,5 @@
 
 export * from './lib/my-lib.component';
 export * from './lib/my-lib.module';
-export * from './lib/com/com.component';
+export * from './lib/com/animation';
 

@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { MyLibComponent } from './my-lib.component';
-import { ComComponent } from './com/com.component';
-
-
-
+import { Animation } from './com/animation';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     MyLibComponent,
-    ComComponent
+    Animation
   ],
   imports: [
+    CommonModule,
+    FormsModule
   ],
   exports: [
     MyLibComponent,
-    ComComponent
+    Animation
   ]
 })
 export class MyLibModule { }

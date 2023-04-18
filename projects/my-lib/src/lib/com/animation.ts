@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-com',
-  templateUrl: '../ui/com.component.html',
+  selector: 'Animation',
+  templateUrl: '../ui/animation.html',
   styleUrls: ['../ui/style.css']
 })
-export class ComComponent {
+export class Animation implements OnInit{
   @Input() vsecomimage:any=[]
   sliderId: any;
   imageItereate=0;
