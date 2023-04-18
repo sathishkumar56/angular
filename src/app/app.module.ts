@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MyLibModule } from 'projects/my-lib/src/lib/my-lib.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
