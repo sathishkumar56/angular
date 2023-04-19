@@ -7,6 +7,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MyLibModule } from 'projects/my-lib/src/lib/my-lib.module';
 import { AppRoutingModule } from './app-routing.module';
 import { UiCardComponent } from './ui-card/ui-card.component';
+import { GlobalserviceService } from './service/globalservice.service';
 
 
 
@@ -26,7 +27,7 @@ import { UiCardComponent } from './ui-card/ui-card.component';
     ,AppRoutingModule
   
   ],
-  providers: [],
+  providers: [GlobalserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
