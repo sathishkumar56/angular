@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { UiCardComponent } from './ui-card/ui-card.component';
 
 
-const routes: Routes = [{ path: '', component: UiCardComponent },];
+const routes: Routes = [{ path: '', component: UiCardComponent },
+];
 
 
 @NgModule({

@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<hr/>
+<google-pay-button environment="TEST"
+buttonType="buy" buttonColor="black" [paymentRequest]="PaymentRequest"
+(loadpaymentdata)="onLoadPaymentData($event)"
+(error)="onError($event)" [paymentAuthorizedCallback]="onPaymentDataAuthorized">
+
+</google-pay-button>

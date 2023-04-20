@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { UiCardComponent } from './ui-card/ui-card.component';
 import { GlobalserviceService } from './service/globalservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './payment/payment.component';
+import { GooglePayButtonModule } from '@google-pay/button-angular';
 
 
 
@@ -18,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeroesComponent,
     HeroDetailComponent,
     UiCardComponent,
+    PaymentComponent,
     
 
   ],
@@ -26,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MyLibModule
     ,AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GooglePayButtonModule
   
   ],
   providers: [GlobalserviceService],
