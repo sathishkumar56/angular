@@ -9,8 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { UiCardComponent } from './ui-card/ui-card.component';
 import { GlobalserviceService } from './service/globalservice.service';
 import { HttpClientModule } from '@angular/common/http';
-import { PaymentComponent } from './payment/payment.component';
+import { PaymentComponent } from './gpay/payment.component';
 import { GooglePayButtonModule } from '@google-pay/button-angular';
+import { PaypalComponent } from './paypal/paypal.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 
 
@@ -21,6 +23,7 @@ import { GooglePayButtonModule } from '@google-pay/button-angular';
     HeroDetailComponent,
     UiCardComponent,
     PaymentComponent,
+    PaypalComponent,
     
 
   ],
@@ -30,7 +33,8 @@ import { GooglePayButtonModule } from '@google-pay/button-angular';
     MyLibModule
     ,AppRoutingModule,
     HttpClientModule,
-    GooglePayButtonModule
+    GooglePayButtonModule,
+    NgxPayPalModule
   
   ],
   providers: [GlobalserviceService],

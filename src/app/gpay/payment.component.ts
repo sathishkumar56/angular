@@ -33,7 +33,7 @@ export class PaymentComponent {
     transactionInfo: {
       totalPriceStatus: 'FINAL',
       totalPriceLabel: 'Total',
-      totalPrice: '100.00',
+      totalPrice: '1.10',
       currencyCode: 'USD',
       countryCode: 'US'
     },
