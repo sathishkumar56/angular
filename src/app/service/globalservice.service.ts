@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalserviceService {
-  
 
-  constructor() { }
+  apiurl='https://jsonplaceholder.typicode.com/todos/1';
+  constructor(private httpClient: HttpClient) { }
 
-  logSomeMessage(msg: any) { 
-    return("Message from consumer is : " + msg); 
+  logSomeMessage() { 
+    return this.httpClient.get(this.apiurl);
+
 	}
-  getdata(): string[] {
-    return ['C','C++', 'JAVA', 'Python'];
+ 
 }
-}
+

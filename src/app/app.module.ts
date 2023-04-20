@@ -8,7 +8,7 @@ import { MyLibModule } from 'projects/my-lib/src/lib/my-lib.module';
 import { AppRoutingModule } from './app-routing.module';
 import { UiCardComponent } from './ui-card/ui-card.component';
 import { GlobalserviceService } from './service/globalservice.service';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,14 +17,16 @@ import { GlobalserviceService } from './service/globalservice.service';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    UiCardComponent
+    UiCardComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     MyLibModule
-    ,AppRoutingModule
+    ,AppRoutingModule,
+    HttpClientModule
   
   ],
   providers: [GlobalserviceService],
