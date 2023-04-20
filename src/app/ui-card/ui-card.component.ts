@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { GlobalserviceService } from '../service/globalservice.service';
 import { Subscription } from 'rxjs';
 
@@ -9,7 +9,15 @@ import { Subscription } from 'rxjs';
   providers: []
 })
 export class UiCardComponent implements OnInit {
-  
+
+  numberOfClicks = 0;
+
+  @HostListener('click', ['$event.target'])
+  onClick(event: MouseEvent) {
+    this.numberOfClicks++;
+    console.log('Button clicked:', event, 'Number of clicks:', this.numberOfClicks);
+  }
+
   @Input()
   locationName!: string;
   @Input()
