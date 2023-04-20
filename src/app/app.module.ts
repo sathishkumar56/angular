@@ -13,7 +13,7 @@ import { PaymentComponent } from './gpay/payment.component';
 import { GooglePayButtonModule } from '@google-pay/button-angular';
 import { PaypalComponent } from './paypal/paypal.component';
 import { NgxPayPalModule } from 'ngx-paypal';
-
+import { MatDrawer } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -34,7 +34,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     ,AppRoutingModule,
     HttpClientModule,
     GooglePayButtonModule,
-    NgxPayPalModule
+    NgxPayPalModule,
+    
   
   ],
   providers: [GlobalserviceService],

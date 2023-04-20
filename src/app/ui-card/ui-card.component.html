@@ -4,22 +4,31 @@
             <img src="{{imageName}}" alt="Avatar">
             <h4 class="title">{{locationName ? locationName : 'Blue Mountains'}}</h4>
             <p>NSW, Australia</p>
-            <div class="container card">
-                <!-- <tr *ngFor="let item of posts">
-                    <td>{{ item.key }}</td>-
-                    <td>{{ item.value }}</td>
-                  </tr> -->
-                <div>{{ posts | json }}</div>
-                <!-- <li 
-                *ngFor="let post of posts |keyvalue"
-                class="list-group-item">
-                <div>{{ post.key }}: {{ post.value }}</div>
-            </li> -->
-            </div>
+            
         </div>
-        <button (click)="onClick($event)">{{numberOfClicks}}</button>
-        <div class="col-8">
-            <app-heroes></app-heroes>
+        <div class="col-4">
+            <nav>
+                <a routerLink="/paypal" routerLinkActive="active">paypal</a>
+            </nav>
+            <nav>
+                <a routerLink="/gpay" routerLinkActive="active">paypal</a>
+            </nav>
+            
+              <nav>
+                <a routerLink="/heros" routerLinkActive="active">heros</a>
+            </nav>
+        </div>
+        <div class="container card col-4">
+            <!-- <tr *ngFor="let item of posts">
+                <td>{{ item.key }}</td>-
+                <td>{{ item.value }}</td>
+              </tr> -->
+            <div>{{ posts | json }}</div>
+            <!-- <li 
+            *ngFor="let post of posts |keyvalue"
+            class="list-group-item">
+            <div>{{ post.key }}: {{ post.value }}</div>
+        </li> -->
         </div>
     </div>
 </div>
