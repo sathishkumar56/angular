@@ -1,19 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MyLibModule } from 'projects/my-lib/src/lib/my-lib.module';
-import { AppRoutingModule } from './app-routing.module';
-import { UiCardComponent } from './ui-card/ui-card.component';
-import { GlobalserviceService } from './service/globalservice.service';
-import { HttpClientModule } from '@angular/common/http';
-import { PaymentComponent } from './gpay/payment.component';
-import { GooglePayButtonModule } from '@google-pay/button-angular';
-import { PaypalComponent } from './paypal/paypal.component';
-import { NgxPayPalModule } from 'ngx-paypal';
-import { MatDrawer } from '@angular/material/sidenav';
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { GooglePayButtonModule } from "@google-pay/button-angular";
+import { NgxPayPalModule } from "ngx-paypal";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { PaymentComponent } from "./pages/gpay/payment.component";
+import { HeroDetailComponent } from "./pages/hero-detail/hero-detail.component";
+import { HeroesComponent } from "./pages/heroes/heroes.component";
+import { LoginComponent } from "./pages/login/login.component";
+import { PaypalComponent } from "./pages/paypal/paypal.component";
+import { GlobalserviceService } from "./pages/service/globalservice.service";
+import { UiCardComponent } from "./pages/ui-card/ui-card.component";
+
 
 
 @NgModule({
@@ -24,19 +23,18 @@ import { MatDrawer } from '@angular/material/sidenav';
     UiCardComponent,
     PaymentComponent,
     PaypalComponent,
-    
+    LoginComponent
+
 
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    MyLibModule
-    ,AppRoutingModule,
+    BrowserModule
+    , AppRoutingModule,
     HttpClientModule,
     GooglePayButtonModule,
     NgxPayPalModule,
-    
-  
+
+
   ],
   providers: [GlobalserviceService],
   bootstrap: [AppComponent]

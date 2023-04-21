@@ -1,6 +1,5 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { GlobalserviceService } from '../service/globalservice.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-ui-card',

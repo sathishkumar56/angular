@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UiCardComponent } from './ui-card/ui-card.component';
-import { PaymentComponent } from './gpay/payment.component';
-import { PaypalComponent } from './paypal/paypal.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { PaymentComponent } from './pages/gpay/payment.component';
+import { HeroesComponent } from './pages/heroes/heroes.component';
+import { PaypalComponent } from './pages/paypal/paypal.component';
+import { UiCardComponent } from './pages/ui-card/ui-card.component';
+
 
 
 const routes: Routes = [
