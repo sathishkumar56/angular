@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IPayPalConfig, ICreateOrderRequest, IPurchaseUnit } from 'ngx-paypal';
 @Component({
   selector: 'app-paypal',
@@ -12,7 +13,7 @@ export class PaypalComponent {
   public payPalConfig?: IPayPalConfig;
   showSuccess: boolean | undefined;
 
-
+  constructor(private router: Router){}
   ngOnInit() {
     this.initConfig();
     console.log('payPalConfig is ' + this.payPalConfig);
@@ -77,5 +78,10 @@ export class PaypalComponent {
         console.log('onClick');
       },
     };
+  }
+
+  logout() {
+    
+    this.router.navigate(['/login'])
   }
 }

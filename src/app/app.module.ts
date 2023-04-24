@@ -8,10 +8,13 @@ import { AppComponent } from "./app.component";
 import { PaymentComponent } from "./pages/gpay/payment.component";
 import { HeroDetailComponent } from "./pages/hero-detail/hero-detail.component";
 import { HeroesComponent } from "./pages/heroes/heroes.component";
-import { LoginComponent } from "./pages/login/login.component";
+
 import { PaypalComponent } from "./pages/paypal/paypal.component";
 import { GlobalserviceService } from "./pages/service/globalservice.service";
 import { UiCardComponent } from "./pages/ui-card/ui-card.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { NgbAlertModule } from "@ng-bootstrap/ng-bootstrap";
+import { LoginComponent } from "./pages/login/login.component";
 
 
 
@@ -25,15 +28,16 @@ import { UiCardComponent } from "./pages/ui-card/ui-card.component";
     PaypalComponent,
     LoginComponent
 
-
   ],
   imports: [
-    BrowserModule
-    , AppRoutingModule,
+    BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     GooglePayButtonModule,
     NgxPayPalModule,
-
+    FormsModule,
+    NgbAlertModule,
+    ReactiveFormsModule
 
   ],
   providers: [GlobalserviceService],

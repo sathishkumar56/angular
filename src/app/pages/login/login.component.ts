@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Router } from '@angular/router';
-
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from 'src/app/Authguard/auth.service';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
   isSubmitted: boolean = false;
@@ -31,12 +35,17 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.authService
       .login(this.form.value.email, this.form.value.password)
-      .subscribe((data) => {
+      .subscribe((data: boolean) => {
         if (data) {
-          this.router.navigate(['/cards']);  // If valid and route to card
+          alert("success");
+          this.router.navigate(['/paypal']); 
+          this.isSubmitted = true;
+          this.isValidUser = data;  // If valid and route to card
         }
-        this.isSubmitted = true;
-        this.isValidUser = data; // false show error message
+        else{
+        alert("error");
+        }
+       // false show error message
       });
   }
 }
